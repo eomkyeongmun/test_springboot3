@@ -30,4 +30,11 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+	outputs.dir snippetsDir
+
+	// 추가된 부분
+	jvmArgs "-Xshare:off"
 }
+
+
+
